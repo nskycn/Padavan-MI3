@@ -1,7 +1,6 @@
 #修改TNAME: K2P 中的K2P为你需要编译的型号，注意名称要与configs/templates/目录下的名字相同
 name: Build Padavan
-env:
-        TNAME: MI-3
+
 on: 
   release:
     types: [published]
@@ -45,7 +44,7 @@ jobs:
         mkdir -p /opt/images/
     - name: Build Firmware
       env:
-        TNAME: K2P
+        TNAME: MI-3
         KERNEL: 3.4
       run: |
         cd /opt/rt-n56u/trunk
